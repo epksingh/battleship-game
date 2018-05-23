@@ -16,11 +16,11 @@ Brief Design:
     BattleGround (BattleGround.java): 
          - Have all cell and ship references. 
          - Its keeping count of destroyed ship. 
-   Cell: 
+    Cell: 
          - There are three Type of Cell are available (P-Type, Q-Type,W-Type)  
          - W-Type(Water-Type) cell is used to fill empty Space. 
          - Cell maintain hit count for result. 
-   Ship: 
+    Ship: 
          - There are two type of ship is available (P-Type, Q-Type); 
          - Ship have references of available cell.
 
