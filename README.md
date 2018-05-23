@@ -7,23 +7,22 @@ Assumption:
   
 Brief Design:
 ============= 
-Classes :  
-	BattleGroundGame (BattleGroundGame.java):  
-		- Having references of all players. 
-		- playGame(): Responsibility of starting game and taking cate of turn of player and announce result. 
-	Player (Player.java): 
- 		- Having reference of BattleGround, and locations of attack 
-		- fireMissile(Player): Player will attack his opponent player and print result on console based on Result of attack 
-	BattleGround (BattleGround.java): 
-		- Have all cell and ship references. 
-		- Its keeping count of destroyed ship. 
-	Cell: 
-		- There are three Type of Cell are available (P-Type, Q-Type,W-Type)  
-		- W-Type(Water-Type) cell is used to fill empty Space. 
-		- Cell maintain hit count for result. 
-	Ship: 
-		- There are two type of ship is available (P-Type, Q-Type); 
- 		- Ship have references of available cell to
+    BattleGroundGame (BattleGroundGame.java):  
+         - Having references of all players. 
+         - playGame(): Responsibility of starting game and taking cate of turn of player and announce result. 
+    Player (Player.java): 
+         - Having reference of BattleGround, and locations of attack 
+         - fireMissile(Player): Player will attack his opponent player and print result on console based on Result of attack 
+    BattleGround (BattleGround.java): 
+         - Have all cell and ship references. 
+         - Its keeping count of destroyed ship. 
+   Cell: 
+         - There are three Type of Cell are available (P-Type, Q-Type,W-Type)  
+         - W-Type(Water-Type) cell is used to fill empty Space. 
+         - Cell maintain hit count for result. 
+   Ship: 
+         - There are two type of ship is available (P-Type, Q-Type); 
+         - Ship have references of available cell.
 
 		
 Extra
