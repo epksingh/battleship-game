@@ -5,7 +5,7 @@ import java.util.List;
 import com.merp.game.base.BattleGround;
 import com.merp.game.base.Location;
 import com.merp.game.exception.ShipOverLappingException;
-import com.merp.game.ships.Ship;
+import com.merp.game.ships.IShip;
 import com.merp.game.utils.ResultState;
 
 public class Player {
@@ -26,7 +26,7 @@ public class Player {
 		battleGround = new BattleGround(noOfRow, noOfCol);
 	}
 
-	public void deployeeShips(List<Ship> shipList) throws IndexOutOfBoundsException, ShipOverLappingException {
+	public void deployeeShips(List<IShip> shipList) throws IndexOutOfBoundsException, ShipOverLappingException {
 		battleGround.deployeeShip(shipList);
 	}
 

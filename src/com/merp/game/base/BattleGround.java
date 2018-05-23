@@ -3,14 +3,14 @@ package com.merp.game.base;
 import java.util.List;
 
 import com.merp.game.exception.ShipOverLappingException;
-import com.merp.game.ships.Ship;
+import com.merp.game.ships.IShip;
 import com.merp.game.utils.ResultState;
 import com.merp.game.utils.Type;
 
 public class BattleGround {
 	private final int noOfRow;
 	private final int noOfCol;
-	private List<Ship> shipList;
+	private List<IShip> shipList;
 	private ICell[][] battleCells;
 	private int shipDestroyedCount;
 
@@ -37,9 +37,9 @@ public class BattleGround {
 				|| battleCells[xCord][yCord].getCellType() == Type.Q));
 	}
 
-	public void deployeeShip(List<Ship> shipList ) throws IndexOutOfBoundsException, ShipOverLappingException {
+	public void deployeeShip(List<IShip> shipList ) throws IndexOutOfBoundsException, ShipOverLappingException {
 		this.shipList = shipList;
-		for (Ship ship : shipList) {
+		for (IShip ship : shipList) {
 			ship.deployeeShip(this);
 		}
 	}

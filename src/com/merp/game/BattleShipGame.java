@@ -12,7 +12,7 @@ import com.merp.game.base.Location;
 import com.merp.game.exception.InvalidInputException;
 import com.merp.game.exception.ShipOverLappingException;
 import com.merp.game.parser.InputParser;
-import com.merp.game.ships.Ship;
+import com.merp.game.ships.IShip;
 import com.merp.game.users.Player;
 import com.merp.game.utils.Constant;
 import com.merp.game.utils.ResultState;
@@ -51,7 +51,7 @@ public class BattleShipGame {
 			int noOfCol = (int) parsedData.get(Constant.NO_OF_COLUMN);
 			int noOfShip = (int) parsedData.get(Constant.NO_OF_SHIP);
 			@SuppressWarnings("unchecked")
-			List<List<Ship>> shipData = (List<List<Ship>>) parsedData.get(Constant.SHIP_DATA);
+			List<List<IShip>> shipData = (List<List<IShip>>) parsedData.get(Constant.SHIP_DATA);
 			@SuppressWarnings("unchecked")
 			List<Location[]> locationData = (List<Location[]>) parsedData.get(Constant.TARGATE_LOCATION);
 			players[0].createBattleGround(noOfRow, noOfCol);

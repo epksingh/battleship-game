@@ -1,7 +1,5 @@
 package com.merp.game.base;
 
-import com.merp.game.ships.Ship;
-import com.merp.game.utils.ResultState;
 import com.merp.game.utils.Type;
 /**
  * 
@@ -9,42 +7,10 @@ import com.merp.game.utils.Type;
  * 
  *
  */
-public class WaterCell implements ICell{
-	private final Location location;
-	private final Type cellType;
-	private Ship ship = null;
+public class WaterCell extends Cell{
 	
 	public WaterCell(final Location location) {
-		this.cellType = Type.W;
-		this.location = location;
+		super( Type.W, location);
 	}
-	@Override
-	public Location getCellPostion() {
-		return this.location;
-	}
-	@Override
-	public Type getCellType() {
-		return this.cellType;
-	}
-
-	
-	@Override
-	public String getCellLocation() {
-		// TODO Auto-generated method stub
-		return Location.getLocationString(location);
-	}
-
-	@Override
-	public ResultState hitCell() {
-		// TODO Auto-generated method stub
-		return ResultState.NO_HIT;
-	}
-	@Override
-	public void setShip(Ship ship) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
 
 }
